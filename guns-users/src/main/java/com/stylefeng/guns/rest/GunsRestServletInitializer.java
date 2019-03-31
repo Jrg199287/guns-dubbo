@@ -13,7 +13,7 @@ public class GunsRestServletInitializer extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        return builder.sources(GunsGetawayApplication.class);
+        return builder.sources(GunsUsersApplication.class);
     }
 
 }

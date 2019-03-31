@@ -13,4 +13,5 @@ package com.stylefeng.guns.core.api.user;
  */
 public interface ServiceApi {
     String sendMessage(String username, String password);
+    boolean login(String username, String password);
 }

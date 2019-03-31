@@ -18,9 +18,15 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Service(interfaceClass = ServiceApi.class)
-public class QuickStartImpl implements ServiceApi {
+public class UserStartImpl implements ServiceApi {
     @Override
     public String sendMessage(String username,String password) {
         return "服务提供者："+username;
+    }
+
+    @Override
+    public boolean login(String userName, String password) {
+        System.out.println("登陆测试");
+        return false;
     }
 }
