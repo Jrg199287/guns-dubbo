@@ -35,6 +35,20 @@
 			<groupId>com.stylefeng</groupId>
 			<artifactId>guns-core</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.alibaba.boot</groupId>
+			<artifactId>dubbo-spring-boot-starter</artifactId>
+			<version>0.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.sgroschupf</groupId>
+			<artifactId>zkclient</artifactId>
+			<version>0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.stylefeng</groupId>
+			<artifactId>guns-api</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>

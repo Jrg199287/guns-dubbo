@@ -32,9 +32,23 @@ spring:
       username: root
       password: 123456
       filters: log4j,wall,mergeStat
+  application:
+    name: dubbo-spring-boot-provider
 
 logging:
   level.root: info
   level.com.stylefeng: debug
   path: logs/
   file: guns-rest.log
+
+
+dubbo:
+  monitor:
+    protocol: registry
+  application:
+    name: annotation-provider
+  protocol:
+    name: dubbo
+    port: 20880
+  registry:
+    address: zookeeper://127.0.0.1:2181

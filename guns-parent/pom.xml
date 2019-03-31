@@ -14,6 +14,7 @@
         <module>../guns-rest</module>
         <module>../guns-generator</module>
         <module>../guns-getaway</module>
+        <module>../guns-api</module>
     </modules>
 
     <parent>
@@ -27,6 +28,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <guns.version>1.0.0-SNAPSHOT</guns.version>
+        <api.version>1.0.0-SNAPSHOT</api.version>
         <mybatisplus-spring-boot-starter.version>1.0.5</mybatisplus-spring-boot-starter.version>
         <shiro.version>1.4.0</shiro.version>
         <mybatis-plus.version>2.1.8</mybatis-plus.version>
@@ -65,7 +67,11 @@
                 <artifactId>guns-core</artifactId>
                 <version>${guns.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.stylefeng</groupId>
+                <artifactId>guns-api</artifactId>
+                <version>${api.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>

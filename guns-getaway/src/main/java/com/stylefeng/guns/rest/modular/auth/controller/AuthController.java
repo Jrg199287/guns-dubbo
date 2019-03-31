@@ -31,12 +31,14 @@ public class AuthController {
     @RequestMapping(value = "${jwt.auth-path}")
     public ResponseEntity<?> createAuthenticationToken(AuthRequest authRequest) {
 
-        boolean validate = reqValidator.validate(authRequest);
+        boolean validates = reqValidator.validate(authRequest);
 
-        if (validate) {
-            final String randomKey = jwtTokenUtil.getRandomKey();
-            final String token = jwtTokenUtil.generateToken(authRequest.getUserName(), randomKey);
-            return ResponseEntity.ok(new AuthResponse(token, randomKey));
+        if (validates) {
+            System.out.println("111111111");
+            final String randomKeys = jwtTokenUtil.getRandomKey();
+            final String tokens = jwtTokenUtil.generateToken(authRequest.getUserName(), randomKeys);
+
+            return ResponseEntity.ok(new AuthResponse(tokens, randomKeys));
         } else {
             throw new GunsException(BizExceptionEnum.AUTH_REQUEST_ERROR);
         }
